@@ -16,7 +16,7 @@ DENSITY_MAP = {
 
 class AssetResizer():
     def __init__(self, out, source_density='xhdpi', prefix='', ldpi=False,
-            xxxhdpi=False, image_filter=Image.ANTIALIAS, image_quality=None):
+            xxxhdpi=False, image_filter=Image.LANCZOS, image_quality=None):
         if source_density not in DENSITY_TYPES:
             raise ValueError('source_density must be one of %s' % str(DENSITY_TYPES))
 
